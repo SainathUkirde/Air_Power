@@ -1,0 +1,102 @@
+{
+  "scenario_id": "INDO_EXERCISE_ALPHA_01",
+  "name": "EXERCISE IRON MONSOON",
+  "classification": "EXERCISE – UNCLASSIFIED",
+  "zulu_start": "2024-10-14T06:00:00Z",
+  "duration_hours": 8,
+
+  "airbases": [
+    {
+      "id": "AB01", "icao": "VAPO", "name": "Poona Air Base",
+      "lat": 18.5793, "lon": 73.9089, "elevation_ft": 1942,
+      "runways": 2, "capacity": 6, "fuel_tons": 200, "ammo_stock": 100
+    },
+    {
+      "id": "AB02", "icao": "VABB", "name": "Lohegaon Forward Strip",
+      "lat": 18.6000, "lon": 74.1500, "elevation_ft": 1900,
+      "runways": 1, "capacity": 3, "fuel_tons": 80, "ammo_stock": 50
+    },
+    {
+      "id": "AB03", "icao": "VANP", "name": "Nagpur Ops Base",
+      "lat": 21.0922, "lon": 79.0472, "elevation_ft": 1017,
+      "runways": 2, "capacity": 5, "fuel_tons": 150, "ammo_stock": 80
+    },
+    {
+      "id": "AB04", "icao": "VOHY", "name": "Hyderabad Strike Ramp",
+      "lat": 17.4531, "lon": 78.4675, "elevation_ft": 1742,
+      "runways": 2, "capacity": 4, "fuel_tons": 120, "ammo_stock": 60
+    }
+  ],
+
+  "aircraft": [
+    {"id":"AC01","callsign":"VIPER 11","role":"STRIKE","base":"AB01","engine_hours":1820,"max_engine_hours":3000,"fuel_kg":4000,"range_km":1200,"payload_kg":4500,"status":"READY","maintenance_due_hrs":4},
+    {"id":"AC02","callsign":"VIPER 12","role":"STRIKE","base":"AB01","engine_hours":2750,"max_engine_hours":3000,"fuel_kg":4000,"range_km":1200,"payload_kg":4500,"status":"READY","maintenance_due_hrs":1.5},
+    {"id":"AC03","callsign":"VIPER 13","role":"STRIKE","base":"AB01","engine_hours":900,"max_engine_hours":3000,"fuel_kg":4000,"range_km":1200,"payload_kg":4500,"status":"READY","maintenance_due_hrs":8},
+    {"id":"AC04","callsign":"RAPTOR 21","role":"SEAD","base":"AB02","engine_hours":2100,"max_engine_hours":3000,"fuel_kg":3500,"range_km":1000,"payload_kg":3000,"status":"READY","maintenance_due_hrs":3},
+    {"id":"AC05","callsign":"RAPTOR 22","role":"SEAD","base":"AB02","engine_hours":2300,"max_engine_hours":3000,"fuel_kg":3500,"range_km":1000,"payload_kg":3000,"status":"READY","maintenance_due_hrs":2.5},
+    {"id":"AC06","callsign":"RAPTOR 23","role":"SEAD","base":"AB03","engine_hours":1100,"max_engine_hours":3000,"fuel_kg":3500,"range_km":1000,"payload_kg":3000,"status":"READY","maintenance_due_hrs":7},
+    {"id":"AC07","callsign":"HAWK 31","role":"CAS","base":"AB03","engine_hours":1500,"max_engine_hours":3000,"fuel_kg":2800,"range_km":800,"payload_kg":2500,"status":"READY","maintenance_due_hrs":6},
+    {"id":"AC08","callsign":"HAWK 32","role":"CAS","base":"AB03","engine_hours":1650,"max_engine_hours":3000,"fuel_kg":2800,"range_km":800,"payload_kg":2500,"status":"READY","maintenance_due_hrs":5},
+    {"id":"AC09","callsign":"HAWK 33","role":"CAS","base":"AB04","engine_hours":700,"max_engine_hours":3000,"fuel_kg":2800,"range_km":800,"payload_kg":2500,"status":"READY","maintenance_due_hrs":10},
+    {"id":"AC10","callsign":"HAWK 34","role":"CAS","base":"AB04","engine_hours":800,"max_engine_hours":3000,"fuel_kg":2800,"range_km":800,"payload_kg":2500,"status":"READY","maintenance_due_hrs":9},
+    {"id":"AC11","callsign":"GHOST 41","role":"ISR","base":"AB04","engine_hours":2600,"max_engine_hours":3000,"fuel_kg":5000,"range_km":2000,"payload_kg":1000,"status":"READY","maintenance_due_hrs":1},
+    {"id":"AC12","callsign":"GHOST 42","role":"ISR","base":"AB01","engine_hours":400,"max_engine_hours":3000,"fuel_kg":5000,"range_km":2000,"payload_kg":1000,"status":"READY","maintenance_due_hrs":12}
+  ],
+
+  "crews": [
+    {"id":"CR01","name":"Sqn Ldr Arora","qualifications":["STRIKE","ISR"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":0},
+    {"id":"CR02","name":"Flt Lt Sharma","qualifications":["STRIKE"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":1.5},
+    {"id":"CR03","name":"Sqn Ldr Mehta","qualifications":["SEAD","STRIKE"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":0},
+    {"id":"CR04","name":"Flt Lt Nair","qualifications":["SEAD"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":2},
+    {"id":"CR05","name":"Sqn Ldr Patel","qualifications":["CAS","STRIKE"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":0},
+    {"id":"CR06","name":"Flt Lt Kapoor","qualifications":["CAS"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":3},
+    {"id":"CR07","name":"Wg Cdr Verma","qualifications":["ISR","CAS"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":12,"flight_hrs_today":0},
+    {"id":"CR08","name":"Flt Lt Desai","qualifications":["STRIKE","SEAD"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":1},
+    {"id":"CR09","name":"Sqn Ldr Iyer","qualifications":["CAS","ISR"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":0},
+    {"id":"CR10","name":"Flt Lt Bose","qualifications":["SEAD","CAS"],"duty_start":"2024-10-14T04:00:00Z","max_duty_hrs":10,"flight_hrs_today":0.5}
+  ],
+
+  "weapons": [
+    {"id":"WP01","type":"PGM","count":8,"weight_kg":500,"compatible_roles":["STRIKE"],"base":"AB01"},
+    {"id":"WP02","type":"HARM","count":6,"weight_kg":360,"compatible_roles":["SEAD"],"base":"AB02"},
+    {"id":"WP03","type":"JDAM","count":10,"weight_kg":450,"compatible_roles":["STRIKE","CAS"],"base":"AB01"},
+    {"id":"WP04","type":"ROCKET_POD","count":12,"weight_kg":200,"compatible_roles":["CAS"],"base":"AB03"},
+    {"id":"WP05","type":"HARM","count":4,"weight_kg":360,"compatible_roles":["SEAD"],"base":"AB03"},
+    {"id":"WP06","type":"RECCE_POD","count":4,"weight_kg":150,"compatible_roles":["ISR"],"base":"AB04"}
+  ],
+
+  "missions": [
+    {"id":"M01","name":"STRIKE ALPHA","priority":1,"type":"STRIKE","target_lat":20.5,"target_lon":76.2,"time_window_start":"2024-10-14T07:00:00Z","time_window_end":"2024-10-14T09:00:00Z","duration_hrs":1.5,"required_role":"STRIKE","required_weapon":"PGM","min_payload_kg":400},
+    {"id":"M02","name":"SEAD BRAVO","priority":1,"type":"SEAD","target_lat":19.8,"target_lon":77.5,"time_window_start":"2024-10-14T06:30:00Z","time_window_end":"2024-10-14T08:00:00Z","duration_hrs":1.0,"required_role":"SEAD","required_weapon":"HARM","min_payload_kg":300},
+    {"id":"M03","name":"CAS CHARLIE","priority":2,"type":"CAS","target_lat":20.1,"target_lon":78.3,"time_window_start":"2024-10-14T08:00:00Z","time_window_end":"2024-10-14T11:00:00Z","duration_hrs":2.0,"required_role":"CAS","required_weapon":"ROCKET_POD","min_payload_kg":150},
+    {"id":"M04","name":"ISR DELTA","priority":2,"type":"ISR","target_lat":21.2,"target_lon":77.8,"time_window_start":"2024-10-14T06:00:00Z","time_window_end":"2024-10-14T12:00:00Z","duration_hrs":3.0,"required_role":"ISR","required_weapon":"RECCE_POD","min_payload_kg":100},
+    {"id":"M05","name":"STRIKE ECHO","priority":2,"type":"STRIKE","target_lat":19.2,"target_lon":75.8,"time_window_start":"2024-10-14T09:00:00Z","time_window_end":"2024-10-14T12:00:00Z","duration_hrs":1.5,"required_role":"STRIKE","required_weapon":"JDAM","min_payload_kg":400},
+    {"id":"M06","name":"SEAD FOXTROT","priority":3,"type":"SEAD","target_lat":20.8,"target_lon":76.9,"time_window_start":"2024-10-14T10:00:00Z","time_window_end":"2024-10-14T13:00:00Z","duration_hrs":1.0,"required_role":"SEAD","required_weapon":"HARM","min_payload_kg":300},
+    {"id":"M07","name":"CAS GOLF","priority":3,"type":"CAS","target_lat":17.9,"target_lon":79.1,"time_window_start":"2024-10-14T07:30:00Z","time_window_end":"2024-10-14T11:00:00Z","duration_hrs":1.5,"required_role":"CAS","required_weapon":"JDAM","min_payload_kg":400},
+    {"id":"M08","name":"STRIKE HOTEL","priority":3,"type":"STRIKE","target_lat":18.8,"target_lon":80.2,"time_window_start":"2024-10-14T11:00:00Z","time_window_end":"2024-10-14T14:00:00Z","duration_hrs":2.0,"required_role":"STRIKE","required_weapon":"JDAM","min_payload_kg":400}
+  ],
+
+  "threat_zones": [
+    {"id":"TZ01","name":"SAM RING ALPHA","lat":20.4,"lon":76.3,"radius_km":80,"type":"SAM","severity":"HIGH","active":true},
+    {"id":"TZ02","name":"SAM RING BRAVO","lat":19.7,"lon":77.6,"radius_km":60,"type":"SAM","severity":"CRITICAL","active":true},
+    {"id":"TZ03","name":"AAA BELT CHARLIE","lat":21.0,"lon":78.0,"radius_km":30,"type":"AAA","severity":"MEDIUM","active":true},
+    {"id":"TZ04","name":"SAM RING DELTA","lat":18.5,"lon":80.0,"radius_km":70,"type":"SAM","severity":"HIGH","active":true}
+  ],
+
+  "disruption_templates": [
+    {"type":"AIRCRAFT_UNSERVICEABLE","description":"Aircraft declared unserviceable by maintenance"},
+    {"type":"CREW_UNAVAILABLE","description":"Crew removed from flying duties"},
+    {"type":"WEATHER_CLOSING","description":"Weather deterioration closing airbase or route"},
+    {"type":"NEW_THREAT","description":"New threat zone activated"},
+    {"type":"COMMS_JAM","description":"Communications jamming event"},
+    {"type":"PRIORITY_CHANGE","description":"Mission priority updated by command"}
+  ],
+
+  "weather_cache_coords": [
+    {"lat": 18.5793, "lon": 73.9089, "name": "Poona"},
+    {"lat": 18.6000, "lon": 74.1500, "name": "Lohegaon"},
+    {"lat": 21.0922, "lon": 79.0472, "name": "Nagpur"},
+    {"lat": 17.4531, "lon": 78.4675, "name": "Hyderabad"},
+    {"lat": 20.1000, "lon": 77.5000, "name": "RouteCenter"}
+  ]
+}

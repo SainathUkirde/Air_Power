@@ -1,0 +1,16 @@
+{
+  "feature_names": [
+    "engine_hours",
+    "pct_life",
+    "s2",
+    "s3",
+    "s4",
+    "s9",
+    "s11",
+    "s14"
+  ],
+  "source": "synthetic",
+  "cv_roc_auc_mean": 1.0,
+  "cv_roc_auc_std": 0.0,
+  "trained_at": "2026-10-19T10:01:56.716442Z"
+}

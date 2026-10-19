@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: tempo-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: |
+      pip install -r requirements.txt
+      cd ../data && python train_cmapss.py && python fetch_weather.py
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: SEED
+        value: "42"
+      - key: LOG_LEVEL
+        value: "info"
+      - key: OPENAI_API_KEY
+        sync: false
+    healthCheckPath: /api/health
+    autoDeploy: true

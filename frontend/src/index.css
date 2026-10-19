@@ -1,0 +1,164 @@
+/* TEMPO global styles – dark tactical */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #0f1316;
+  color: #c9d1d9;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #0f1316; }
+::-webkit-scrollbar-thumb { background: #2a3238; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #3a4248; }
+
+/* Leaflet */
+.leaflet-container { background: #0d1114 !important; }
+/* Slight desaturation keeps the map readable but toned down — don't go below 0.85 brightness
+   or state/city labels on the Stadia dark layer become unreadable */
+.leaflet-tile-pane { filter: brightness(0.92) contrast(1.05) saturate(0.82); }
+.leaflet-control-zoom {
+  border: 1px solid #2a3238 !important;
+  border-radius: 0 !important;
+}
+.leaflet-control-zoom a {
+  background: #161b1f !important;
+  color: #c9d1d9 !important;
+  border-color: #2a3238 !important;
+  border-radius: 0 !important;
+  width: 26px !important;
+  height: 26px !important;
+  line-height: 26px !important;
+  font-size: 16px !important;
+}
+.leaflet-control-zoom a:hover { background: #1e252a !important; color: #e8a317 !important; }
+.leaflet-control-attribution {
+  background: rgba(15,19,22,0.85) !important;
+  color: #3a4248 !important;
+  font-size: 9px !important;
+  font-family: Arial, sans-serif !important;
+}
+.leaflet-popup-content-wrapper {
+  background: #161b1f !important;
+  color: #c9d1d9 !important;
+  border: 1px solid #e8a317 !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 0 1px rgba(232,163,23,0.2) !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 12px !important;
+  padding: 8px 12px !important;
+}
+.leaflet-popup-content { margin: 0 !important; }
+.leaflet-popup-tip-container { display: none !important; }
+.leaflet-popup-close-button { color: #57606a !important; font-size: 14px !important; top: 3px !important; right: 5px !important; }
+
+/* Aircraft callsign label */
+.ac-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #e8a317;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px #000, 0 0 6px rgba(0,0,0,0.8);
+  letter-spacing: 0.02em;
+}
+
+/* Gantt animation */
+.gantt-bar {
+  transition: width 0.45s cubic-bezier(.4,0,.2,1), left 0.45s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+}
+
+/* Recomputing pulse */
+@keyframes replan-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+.replan-pulse { animation: replan-pulse 0.7s ease-in-out infinite; }
+
+/* Diff slide-in */
+@keyframes diff-slide-in {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.diff-enter { animation: diff-slide-in 0.2s ease-out forwards; }
+
+/* Feed item pop-in */
+@keyframes feed-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.feed-enter { animation: feed-in 0.2s ease-out forwards; }
+
+/* Negotiation log */
+@keyframes log-in {
+  from { opacity: 0; transform: translateX(-4px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.log-enter { animation: log-in 0.15s ease-out forwards; }
+
+/* Advisory blink for CRITICAL */
+@keyframes crit-blink {
+  0%, 100% { border-color: #d64545; }
+  50%       { border-color: transparent; }
+}
+.crit-advisory { animation: crit-blink 1.2s ease-in-out infinite; }
+
+/* Priority slider */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 100%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(to right, #d64545 0%, #2a3238 35%, #2a3238 65%, #8fb56e 100%);
+  border-radius: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px; height: 12px;
+  background: #e8a317;
+  margin-top: -4px;
+  border-radius: 0;
+  cursor: pointer;
+  border: 1px solid #0f1316;
+}
+input[type=range]::-webkit-slider-thumb:hover { background: #f0b52a; }
+input[type=range]:focus { outline: none; }
+input[type=range]:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Smooth animated underline for active tabs */
+.tab-active-bar {
+  position: relative;
+}
+.tab-active-bar::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0; height: 2px;
+  background: #e8a317;
+}
+
+/* Section headers */
+.section-header {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #57606a;
+  padding: 5px 10px 4px;
+  background: #0f1316;
+  border-bottom: 1px solid #2a3238;
+}
+.section-header.amber { color: #e8a317; }
